@@ -12,5 +12,5 @@ git reset HEAD <filename>	Este comando es usado para quitar un archivo de la "st
 git checkout --<filename>	The same than line upper
 git reset <commit_SHA>		Con este comando nosotos podemos regresar a un previo checkpoint con los primeros siete caracteres de un log. Lo que significa que estaremos borrando los checkpoints anteriores pero las modificaciones que se hicieron seguirian visibles en el archivo.
 git restore <filename>		Para restablecer un archivo eliminado del direcotrio de trabajo o descartar los cambios en el archivo
-
-
+git stash			Se usa para almacenar en un repositorio oculto (como una pausa) se puede volver a el, esto oculta las ultimas modificaciones del archivo.
+git stash pop			Una vez de haber ocultado el archivo se puede volver a aparecer y mostrar sus modificaciones
