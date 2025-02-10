@@ -9,4 +9,8 @@ git log				Podemos ver todos los commits o "checkpoints" hechos del repositorio 
 git checkout HEAD <filename>	Para restablecer un version mas vieja en el directorio de trabajo. La version mas vieja es la ultima en el git log y descarta los cambios hechos en stagging area
 git show HEAD			Muestra el repositorio actual donde estamos trabajando y sus modificaciones
 git reset HEAD <filename>	Este comando es usado para quitar un archivo de la "staging area" o area de preparación para no ser crear un checkpoint en el commit con este archivo.
-git reset <commit_SHA>		Con este comando nosotos podemos regresar a un previo checkpoint con los primeros siete caracteres de un log
+git checkout --<filename>	The same than line upper
+git reset <commit_SHA>		Con este comando nosotos podemos regresar a un previo checkpoint con los primeros siete caracteres de un log. Lo que significa que estaremos borrando los checkpoints anteriores pero las modificaciones que se hicieron seguirian visibles en el archivo.
+git restore <filename>		Para restablecer un archivo eliminado del direcotrio de trabajo o descartar los cambios en el archivo
+
+
