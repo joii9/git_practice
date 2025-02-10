@@ -1,6 +1,6 @@
 Comandos de GIT
 
-git init		Inicializa un path en GIT
+git init			Inicializa un path en GIT
 git status			Comprueba el estado de los archivos dentro del repositorio
 git add				Agregamos el archivo a stagging area. (.) Agrega todos los archivos. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2>
 git diff <filename>		Para revisar cuales son las diferencias del archivo con el ultimo commit
@@ -14,3 +14,8 @@ git reset <commit_SHA>		Con este comando nosotos podemos regresar a un previo ch
 git restore <filename>		Para restablecer un archivo eliminado del direcotrio de trabajo o descartar los cambios en el archivo
 git stash			Se usa para almacenar en un repositorio oculto (como una pausa) se puede volver a el, esto oculta las ultimas modificaciones del archivo.
 git stash pop			Una vez de haber ocultado el archivo se puede volver a aparecer y mostrar sus modificaciones
+git stash list			Muestra una lista de los archivos ocultos
+git branch			Muestra una lista de las branches en nuestro main repositorio
+git branch <name_branch>	Crea una branch y se asigna un nombre al mismo
+git checkout <name_branch>	Se cambia a la rama con el nombre
+git checkout			Enlista los archivos modificados
