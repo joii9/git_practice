@@ -44,3 +44,6 @@ Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0
 git tag					Enlista los tags existentes
 git tag -l "v#.#.#"			Busca un versión en especifico
 
+GITHUB
+git clone https://github.com/....git	Este comando clona un repositorio de github
+git checkout -b <name_branch>		Para cambiar a un nuebo branch <name_branch>
