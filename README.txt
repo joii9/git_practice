@@ -20,7 +20,7 @@ git show HEAD				Muestra el repositorio actual donde estamos trabajando y sus mo
 git reset HEAD <filename>		Este comando es usado para quitar un archivo de la "staging area" o area de preparación para no ser crear un checkpoint en el commit con este archivo.
 git restore <filename>			Para restablecer un archivo eliminado del direcotrio de trabajo o descartar los cambios en el archivo
 git checkout HEAD <filename>		Para restablecer un version mas vieja en el directorio de trabajo. La version mas vieja es la ultima en el git log y descarta los cambios hechos en stagging area
-git checkout --<filename>		The same than line upper
+git checkout --<filename>		Para restablecer un version mas vieja en el directorio de trabajo. La version mas vieja es la ultima en el git log y descarta los cambios hechos en stagging area
 git reset <commit_SHA>			Con este comando nosotos podemos regresar a un previo checkpoint con los primeros siete caracteres de un log. Lo que significa que estaremos borrando los checkpoints anteriores pero las modificaciones que se hicieron seguirian visibles en el archivo.
 
 
@@ -47,3 +47,13 @@ git tag -l "v#.#.#"			Busca un versión en especifico
 
 GITHUB
 git clone https://github.com/....git	Este comando clona un repositorio de github
+git remote add origin <link>		Agrega nuestro repositorio local a un link en github
+git push -u origin master		Cargará nuestro repositorio local a nuestro repositorio en github
+git push				Cargará nuestro repositorio local a nuestro repositorio en github
+git pull				Descargará las modificaciones que hayan sido subidas a nuestro repositorio en github
+git remote -v				Muestra que nuestro proyecto agregado de github en el link correcto
+git config user.name "some_name"	Para configurar el autor de las modificaciones
+git config user.email "someone@mail.com"Para configurar el correo del autor de las modificaciones.
+
+
+
