@@ -38,6 +38,7 @@ GIT BRANCH
 git branch				Muestra una lista de las branches en nuestro main repositorio
 git branch <name_branch>		Crea una branch y se asigna un nombre al mismo
 git checkout <name_branch>		Se cambia a la rama con el nombre
+git checkout -b <name_branch>		Para cambiar a un nuebo branch <name_branch>
 
 GIT TAG
 Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0, v2.0.0, etc.). Existen dos tipos de tags "lightweight" y "annotated".
@@ -46,4 +47,3 @@ git tag -l "v#.#.#"			Busca un versión en especifico
 
 GITHUB
 git clone https://github.com/....git	Este comando clona un repositorio de github
-git checkout -b <name_branch>		Para cambiar a un nuebo branch <name_branch>
