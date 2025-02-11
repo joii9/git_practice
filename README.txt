@@ -4,8 +4,8 @@ git init				Inicializa un path en GIT
 git checkout				Enlista los archivos modificados
 git status				Comprueba el estado de los archivos dentro del repositorio
 git add					Agregamos el archivo a stagging area. (.) Agrega todos los archivos. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2>
-git diff <filename>			Para revisar cuales son las diferencias del archivo con el ultimo commit
 git commit -m "message"			Comando para generear un "checkpoint" un punto con log, un punto al cual se puede volver.
+git diff <filename>			Para revisar cuales son las diferencias del archivo con el ultimo commit
 git log					Podemos ver todos los commits o "checkpoints" hechos del repositorio y un identificador SHA de cada commit
 git log --oneline			Muestra los logs en una sola linea
 git log -n				Limita el numero de log mostrasdos por commits, dependiendo el numero especificado
@@ -13,12 +13,16 @@ git log --skip=<number>			Salta el numero de logs recientes. (No muestra los ult
 git log --author=<author>		Muestra los commits hechos por "author"
 git log --grep=<keyword>		Muestra los mensajes de los commits que contengan la palabra buscada
 git log --grep=<keyword> --invert-grep	Muestra todos los resultados que NO contentan "keyword"
-git checkout HEAD <filename>		Para restablecer un version mas vieja en el directorio de trabajo. La version mas vieja es la ultima en el git log y descarta los cambios hechos en stagging area
 git show HEAD				Muestra el repositorio actual donde estamos trabajando y sus modificaciones
 git reset HEAD <filename>		Este comando es usado para quitar un archivo de la "staging area" o area de preparación para no ser crear un checkpoint en el commit con este archivo.
+git restore <filename>			Para restablecer un archivo eliminado del direcotrio de trabajo o descartar los cambios en el archivo
+git checkout HEAD <filename>		Para restablecer un version mas vieja en el directorio de trabajo. La version mas vieja es la ultima en el git log y descarta los cambios hechos en stagging area
 git checkout --<filename>		The same than line upper
 git reset <commit_SHA>			Con este comando nosotos podemos regresar a un previo checkpoint con los primeros siete caracteres de un log. Lo que significa que estaremos borrando los checkpoints anteriores pero las modificaciones que se hicieron seguirian visibles en el archivo.
-git restore <filename>			Para restablecer un archivo eliminado del direcotrio de trabajo o descartar los cambios en el archivo
+git commit --amend			Este comando es para actualizar el ultimo commit y evitar crear otro commit
+git commit --amend -m "message"		Edita el ultimo commit con el nuevo mensaje
+git commit --amend --no-edit		Imposibilita la opción de poder actualizar el mensaje (amendment)
+
 
 GIT STASH
 git stash				Se usa para almacenar en un repositorio oculto (como una pausa) se puede volver a el, esto oculta las ultimas modificaciones del archivo.
