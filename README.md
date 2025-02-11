@@ -1,12 +1,7 @@
 # Comandos de GIT
 
-+ **git init** 					
-	
-	Inicializa un path en GIT
-+ **git checkout**				
-	
-	Enlista los archivos modificados
-
++ **git init** 					Inicializa un path en GIT
++ **git checkout**				Enlista los archivos modificados
 + **git status**				Comprueba el estado de los archivos dentro del repositorio.
 + **git add**					Agregamos el archivo a stagging area. (.) Agrega todos los archivos. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2>
 + **git commit -m "message"**			Comando para generear un "checkpoint" un punto con log, un punto al cual se puede volver.
@@ -38,15 +33,15 @@
 + **git stash list**				Muestra una lista de los archivos ocultos
 
 ## GIT BRANCH
-+ git branch				Muestra una lista de las branches en nuestro main repositorio
-+ git branch <name_branch>		Crea una branch y se asigna un nombre al mismo
-+ git checkout <name_branch>		Se cambia a la rama con el nombre
-+ git checkout -b <name_branch>		Para cambiar a un nuebo branch <name_branch>
++ **git branch**				Muestra una lista de las branches en nuestro main repositorio
++ **git branch <name_branch>**			Crea una branch y se asigna un nombre al mismo
++ **git checkout <name_branch>**		Se cambia a la rama con el nombre
++ **git checkout -b <name_branch>**		Para cambiar a un nuebo branch <name_branch>
 
 ## GIT TAG
 Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0, v2.0.0, etc.). Existen dos tipos de tags "lightweight" y "annotated".
-+ git tag					Enlista los tags existentes
-+ git tag -l "v#.#.#"			Busca un versión en especifico
++ **git tag**					Enlista los tags existentes
++ **git tag -l *v#.#.#****			Busca un versión en especifico
 
 ## GITHUB
 + git clone https://github.com/....git	Este comando clona un repositorio de github
