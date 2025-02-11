@@ -1,11 +1,9 @@
 # Comandos de GIT
 
-**git init** 					
-Inicializa un path en GIT
-
-**git checkout**				
-Enlista los archivos modificados
-
++ **git init** 					
+	Inicializa un path en GIT
++ **git checkout**				
+	Enlista los archivos modificados
 + **git status**				Comprueba el estado de los archivos dentro del repositorio.
 + **git add**					Agregamos el archivo a stagging area. (.) Agrega todos los archivos. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2>
 + **git commit -m "message"**			Comando para generear un "checkpoint" un punto con log, un punto al cual se puede volver.
@@ -24,17 +22,17 @@ Enlista los archivos modificados
 + **git reset HEAD *filename***			Este comando es usado para quitar un archivo de la "staging area" o area de preparación para no ser crear un checkpoint en el commit con este archivo.
 + **git restore *filename***			Para restablecer un archivo eliminado del direcotrio de trabajo o descartar los cambios en el archivo
 + **git checkout HEAD *filename***		Para restablecer un version mas vieja en el directorio de trabajo. La version mas vieja es la ultima en el git log y descarta los cambios hechos en stagging area
-+ **git checkout --*filename***		Para restablecer un version mas vieja en el directorio de trabajo. La version mas vieja es la ultima en el git log y descarta los cambios hechos en stagging area
++ **git checkout --*filename***			Para restablecer un version mas vieja en el directorio de trabajo. La version mas vieja es la ultima en el git log y descarta los cambios hechos en stagging area
 + **git reset *commit_SHA***			Con este comando nosotos podemos regresar a un previo checkpoint con los primeros siete caracteres de un log. Lo que significa que estaremos borrando los checkpoints anteriores pero las modificaciones que se hicieron seguirian visibles en el archivo.
 
 ## GIT STASH
-+ git stash				Se usa para almacenar en un repositorio oculto (como una pausa) se puede volver a el, esto oculta las ultimas modificaciones del archivo.
-+ git stash apply				Muestra el archivo con las modificaciones ocultas pero no elimina el stash
-+ git stash drop				Elimina el ultimo stash
-+ git stash drop stash@{#}		Elimina un stash en especifico
-+ git stash clear				Elimina todos los stashes
-+ git stash pop				Una vez de haber ocultado el archivo se puede volver a aparecer y mostrar sus modificaciones y elimina el stash
-+ git stash list				Muestra una lista de los archivos ocultos
++ **git stash**					Se usa para almacenar en un repositorio oculto (como una pausa) se puede volver a el, esto oculta las ultimas modificaciones del archivo.
++ **git stash apply**				Muestra el archivo con las modificaciones ocultas pero no elimina el stash
++ **git stash drop**				Elimina el ultimo stash
++ **git stash drop stash@{#}**			Elimina un stash en especifico
++ **git stash clear**				Elimina todos los stashes
++ **git stash pop**				Una vez de haber ocultado el archivo se puede volver a aparecer y mostrar sus modificaciones y elimina el stash
++ **git stash list**				Muestra una lista de los archivos ocultos
 
 ## GIT BRANCH
 + git branch				Muestra una lista de las branches en nuestro main repositorio
