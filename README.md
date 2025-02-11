@@ -1,6 +1,6 @@
 # Comandos de GIT
 
-git init				Inicializa un path en GIT
+** git init **				Inicializa un path en GIT
 git checkout				Enlista los archivos modificados
 git status				Comprueba el estado de los archivos dentro del repositorio
 git add					Agregamos el archivo a stagging area. (.) Agrega todos los archivos. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2>
