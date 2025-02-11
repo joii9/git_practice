@@ -1,7 +1,7 @@
 # Comandos de GIT
 
-**git init** 				Inicializa un path en GIT
-git checkout				Enlista los archivos modificados
+**git init** 				Inicializa un path en GIT \n
+**git checkout**			Enlista los archivos modificados
 
 git status				Comprueba el estado de los archivos dentro del repositorio.
 
