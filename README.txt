@@ -5,6 +5,9 @@ git checkout				Enlista los archivos modificados
 git status				Comprueba el estado de los archivos dentro del repositorio
 git add					Agregamos el archivo a stagging area. (.) Agrega todos los archivos. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2>
 git commit -m "message"			Comando para generear un "checkpoint" un punto con log, un punto al cual se puede volver.
+git commit --amend			Este comando es para actualizar el ultimo commit y evitar crear otro commit
+git commit --amend -m "message"		Edita el ultimo commit con el nuevo mensaje
+git commit --amend --no-edit		Si olvidamos agregar algun archivo a nuestro ultSi olvidamos agregar algun archivo a nuestro ultimo commit, nosotros podemos agregar un archivo al ultimo commit
 git diff <filename>			Para revisar cuales son las diferencias del archivo con el ultimo commit
 git log					Podemos ver todos los commits o "checkpoints" hechos del repositorio y un identificador SHA de cada commit
 git log --oneline			Muestra los logs en una sola linea
@@ -19,15 +22,14 @@ git restore <filename>			Para restablecer un archivo eliminado del direcotrio de
 git checkout HEAD <filename>		Para restablecer un version mas vieja en el directorio de trabajo. La version mas vieja es la ultima en el git log y descarta los cambios hechos en stagging area
 git checkout --<filename>		The same than line upper
 git reset <commit_SHA>			Con este comando nosotos podemos regresar a un previo checkpoint con los primeros siete caracteres de un log. Lo que significa que estaremos borrando los checkpoints anteriores pero las modificaciones que se hicieron seguirian visibles en el archivo.
-git commit --amend			Este comando es para actualizar el ultimo commit y evitar crear otro commit
-git commit --amend -m "message"		Edita el ultimo commit con el nuevo mensaje
-git commit --amend --no-edit		Imposibilita la opción de poder actualizar el mensaje (amendment)
 
 
 GIT STASH
 git stash				Se usa para almacenar en un repositorio oculto (como una pausa) se puede volver a el, esto oculta las ultimas modificaciones del archivo.
 git stash apply				Muestra el archivo con las modificaciones ocultas pero no elimina el stash
 git stash drop				Elimina el ultimo stash
+git stash drop stash@{#}		Elimina un stash en especifico
+git stash clear				Elimina todos los stashes
 git stash pop				Una vez de haber ocultado el archivo se puede volver a aparecer y mostrar sus modificaciones y elimina el stash
 git stash list				Muestra una lista de los archivos ocultos
 
@@ -36,4 +38,9 @@ GIT BRANCH
 git branch				Muestra una lista de las branches en nuestro main repositorio
 git branch <name_branch>		Crea una branch y se asigna un nombre al mismo
 git checkout <name_branch>		Se cambia a la rama con el nombre
+
+GIT TAG
+Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0, v2.0.0, etc.). Existen dos tipos de tags "lightweight" y "annotated".
+git tag					Enlista los tags existentes
+git tag -l "v#.#.#"			Busca un versión en especifico
 
