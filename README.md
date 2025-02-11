@@ -1,4 +1,4 @@
-#Comandos de GIT
+# Comandos de GIT
 
 git init				Inicializa un path en GIT
 git checkout				Enlista los archivos modificados
