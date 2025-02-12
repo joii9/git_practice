@@ -38,12 +38,23 @@ GIT BRANCH
 git branch				Muestra una lista de las branches en nuestro main repositorio
 git branch <name_branch>		Crea una branch y se asigna un nombre al mismo
 git checkout <name_branch>		Se cambia a la rama con el nombre
+git switch <name_branch>		Cambia de branch
 git checkout -b <name_branch>		Para cambiar a un nuebo branch <name_branch>
+git merge <brand_name>			Esto es para unir dos branches por ejemplo main y branch_name
+git branch -d				Para borrar un tag de mi repositorio local
 
 GIT TAG
 Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0, v2.0.0, etc.). Existen dos tipos de tags "lightweight" y "annotated".
 git tag					Enlista los tags existentes
-git tag -l "v#.#.#"			Busca un versión en especifico
+git tag -l <v#.#.#>			Busca una versión en especifico
+git tag <v#.#.#>			Creando un tag ligero
+git tag -a <v#.#.#> -m "message"	Crea un annotated tag con la opción de agregar un mensaje en el tag
+git tag -a <v#.#.#> <checksum>		Este comando es para agregar un annotated tag in a specific commit point con su respectivo checksum number. Esto abrirá el editor de texto vi.
+git show <version>			Muestra la información acerca del tag
+git tag -d <v#.#.#>			Elimina un tag del repositorio local
+git push origin <tag>			Esto subira el tag especifico a nuestro repositorio de github
+git push --tags				Esto subira todos los tags a nuestro repositorio de github
+git push origin --delete <v#.#.#>	Esto eliminara el tag especificado de nuestro repositorio de github
 
 GITHUB
 git clone https://github.com/....git	Este comando clona un repositorio de github
