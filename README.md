@@ -44,14 +44,14 @@ Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0
 + **git tag -l *v#.#.#****			Busca un versión en especifico
 
 ## GITHUB
-+ git clone https://github.com/....git	Este comando clona un repositorio de github
-+ git remote add origin <link>		Agrega nuestro repositorio local a un link en github
-+ git push -u origin master		Cargará nuestro repositorio local a nuestro repositorio en github
-+ git push				Cargará nuestro repositorio local a nuestro repositorio en github
-+ git pull				Descargará las modificaciones que hayan sido subidas a nuestro repositorio en github
-+ git remote -v				Muestra que nuestro proyecto agregado de github en el link correcto
-+ git config user.name "some_name"	Para configurar el autor de las modificaciones
-+ git config user.email "someone@mail.com"Para configurar el correo del autor de las modificaciones.
++ **git clone https://github.com/....git**	Este comando clona un repositorio de github
++ **git remote add origin <link>**		Agrega nuestro repositorio local a un link en github
++ **git push -u origin master**			Cargará nuestro repositorio local a nuestro repositorio en github
++ **git push**					Cargará nuestro repositorio local a nuestro repositorio en github
++ **git pull**					Descargará las modificaciones que hayan sido subidas a nuestro repositorio en github
++ **git remote -v**				Muestra que nuestro proyecto agregado de github en el link correcto
++ **git config user.name "some_name"**		Para configurar el autor de las modificaciones
++ **git config user.email "someone@mail.com"**	Para configurar el correo del autor de las modificaciones.
 
 
 
