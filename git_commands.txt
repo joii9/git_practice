@@ -52,6 +52,7 @@ git tag -a <v#.#.#> -m "message"	Crea un annotated tag con la opción de agregar
 git tag -a <v#.#.#> <checksum>		Este comando es para agregar un annotated tag in a specific commit point con su respectivo checksum number. Esto abrirá el editor de texto vi.
 git show <version>			Muestra la información acerca del tag
 git checkout <v#.#.#>			Cambia a la version del tag
+git switch <branch_name>		Cambia al branch indicado
 git tag -d <v#.#.#>			Elimina un tag del repositorio local
 git push origin <tag>			Esto subira el tag especifico a nuestro repositorio de github
 git push --tags				Esto subira todos los tags a nuestro repositorio de github
