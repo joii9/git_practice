@@ -72,3 +72,4 @@ git remote -v						Muestra que nuestro proyecto agregado de github en el link co
 git config user.name "some_name"			Para configurar el autor de las modificaciones
 git config user.email "someone@mail.com"		Para configurar el correo del autor de las modificaciones.
 
+modificación 1
