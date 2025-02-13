@@ -43,9 +43,10 @@ git switch <name_branch>				Cambia de branch
 git checkout -b <name_branch>				Para cambiar a un nuebo branch <name_branch>
 git merge <brand_name>					Esto es para unir dos branches por ejemplo main y branch_name
 git branch -d						Para borrar un tag de mi repositorio local
+git merge <branch_name>	Cuando uno intenta hacer merge en dos branches que ambas tuvieron modificaciones el merge entrara en conflicto (conflict). Esto se resuelve entrando al archivo y en el veremos las modificaciones marcadas con < ===== > que marcan el inicio, la division y el final de las modificaciones correspondientes a las dos branches. Aquí podemos decirdir quedarnos con una, con otra o incluso con las dos. Corremos de nuevo git add <filename>, esto mostrara el archivo en verde y una leyenda que los conflictos fueron resueltos y por ultimo un git commit -m "mensaje". De esta manera resolvemos un merging conflict.
 
 GIT TAG
-Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0, v2.0.0, etc.). Existen dos tipos de tags "lightweight" y "annotated".
+Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0, v2.0.0, etc.). Existen dos tipos de tags "lightweight" y "annotated". Crear tags es sumamente util cuando queremos volver a esa version de nuestro desarrollo y despues volver a la version mas reciente que se esta trabajando. Se pueden añadir tags en commits viejos.
 git tag							Enlista los tags existentes
 git tag -l <v#.#.#>					Busca una versión en especifico
 git tag <v#.#.#>					Creando un tag ligero
@@ -70,8 +71,4 @@ git pull						Descargará las modificaciones que hayan sido subidas a nuestro re
 git remote -v						Muestra que nuestro proyecto agregado de github en el link correcto
 git config user.name "some_name"			Para configurar el autor de las modificaciones
 git config user.email "someone@mail.com"		Para configurar el correo del autor de las modificaciones.
-
-
-MODIFICATIONS IN MAIN
-MODIFICATION IN MODIFICATION
 
