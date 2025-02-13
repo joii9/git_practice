@@ -76,6 +76,4 @@ modificación 1
 modificación 2
 modificación 3
 
-modificación 7
-modificación 8
-modifciación 9
+modificación 4 de rebase
