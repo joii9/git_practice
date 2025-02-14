@@ -16,6 +16,7 @@ git log --skip=<number>					Salta el numero de logs recientes. (No muestra los u
 git log --author=<author>				Muestra los commits hechos por "author"
 git log --grep=<keyword>				Muestra los mensajes de los commits que contengan la palabra buscada
 git log --grep=<keyword> --invert-grep			Muestra todos los resultados que NO contentan "keyword"
+git log --oneline --decorate --graph --all		Genera una grafica con nuestros commits y merges
 git show HEAD						Muestra el repositorio actual donde estamos trabajando y sus modificaciones
 git reset HEAD <filename>				Este comando es usado para quitar un archivo de la "staging area" o area de preparación para no ser crear un checkpoint en el commit con este archivo.
 git restore <filename>					Para restablecer un archivo eliminado del direcotrio de trabajo o descartar los cambios en el archivo
@@ -43,7 +44,9 @@ git switch <name_branch>				Cambia de branch
 git checkout -b <name_branch>				Para cambiar a un nuebo branch <name_branch>
 git merge <brand_name>					Esto es para unir dos branches por ejemplo main y branch_name
 git branch -d						Para borrar un tag de mi repositorio local
-git merge <branch_name>	Cuando uno intenta hacer merge en dos branches que ambas tuvieron modificaciones el merge entrara en conflicto (conflict). Esto se resuelve entrando al archivo y en el veremos las modificaciones marcadas con < ===== > que marcan el inicio, la division y el final de las modificaciones correspondientes a las dos branches. Aquí podemos decirdir quedarnos con una, con otra o incluso con las dos. Corremos de nuevo git add <filename>, esto mostrara el archivo en verde y una leyenda que los conflictos fueron resueltos y por ultimo un git commit -m "mensaje". De esta manera resolvemos un merging conflict.
+git rebase <branch_name>				Este comando es util cuando se han trabajado en dos branches y una de las branches se necesita poner por delante de la otra. Este comando traslada los commits que hace el rebase por delante de la otra branch. Es importante tener cuidado que branch hace el rebase. 
+git merge <branch_name>		Cuando uno intenta hacer merge en dos branches que ambas tuvieron modificaciones el merge entrara en conflicto (conflict). Esto se resuelve entrando al archivo y en el veremos las modificaciones marcadas con < ===== > que marcan el inicio, la division y el final de las modificaciones correspondientes a las dos branches. Aquí podemos decirdir quedarnos con una, con otra o incluso con las dos. Corremos de nuevo git add <filename>, esto mostrara el archivo en verde y una leyenda que los conflictos fueron resueltos y por ultimo un git commit -m "mensaje". De esta manera resolvemos un merging conflict.
+git rebase <branch_name>	Cuando uno hace un rebase y se trabajó en el mismo archivo entrará en conflicto. El conflicto se resuelve de la misma forma en que se resuelve el conflicto en merge, decidiendo que linea entra, que linea sale, o si ambas se quedan. Esto es en cada commit hecho en el branch que entre en conflicto, así que probablemente se tenga que arreglar mas de un conflicto. 
 
 GIT TAG
 Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0, v2.0.0, etc.). Existen dos tipos de tags "lightweight" y "annotated". Crear tags es sumamente util cuando queremos volver a esa version de nuestro desarrollo y despues volver a la version mas reciente que se esta trabajando. Se pueden añadir tags en commits viejos.
@@ -71,13 +74,5 @@ git pull						Descargará las modificaciones que hayan sido subidas a nuestro re
 git remote -v						Muestra que nuestro proyecto agregado de github en el link correcto
 git config user.name "some_name"			Para configurar el autor de las modificaciones
 git config user.email "someone@mail.com"		Para configurar el correo del autor de las modificaciones.
-
-modificación 1
-modificación 2
-modificación 3
-
-
-modificación 4 de rebase
-modificación 5
-modificación 6
+git fetch <remote_branch>				Este comando solo buscará las modificaciiones hechas en una branch en github. Esto no mergeria.
 
