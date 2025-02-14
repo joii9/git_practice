@@ -39,11 +39,11 @@ git stash list						Muestra una lista de los archivos ocultos
 GIT BRANCH
 git branch						Muestra una lista de las branches en nuestro main repositorio
 git branch <name_branch>				Crea una branch y se asigna un nombre al mismo
+git branch -d						Para borrar un branch de mi repositorio local
 git checkout <name_branch>				Se cambia a la rama con el nombre
 git switch <name_branch>				Cambia de branch
 git checkout -b <name_branch>				Para cambiar a un nuebo branch <name_branch>
-git merge <brand_name>					Esto es para unir dos branches por ejemplo main y branch_name
-git branch -d						Para borrar un tag de mi repositorio local
+git merge <branch_name>					Esto es para unir dos branches por ejemplo main y branch_name
 git rebase <branch_name>				Este comando es util cuando se han trabajado en dos branches y una de las branches se necesita poner por delante de la otra. Este comando traslada los commits que hace el rebase por delante de la otra branch. Es importante tener cuidado que branch hace el rebase. 
 git merge <branch_name>		Cuando uno intenta hacer merge en dos branches que ambas tuvieron modificaciones el merge entrara en conflicto (conflict). Esto se resuelve entrando al archivo y en el veremos las modificaciones marcadas con < ===== > que marcan el inicio, la division y el final de las modificaciones correspondientes a las dos branches. Aquí podemos decirdir quedarnos con una, con otra o incluso con las dos. Corremos de nuevo git add <filename>, esto mostrara el archivo en verde y una leyenda que los conflictos fueron resueltos y por ultimo un git commit -m "mensaje". De esta manera resolvemos un merging conflict.
 git rebase <branch_name>	Cuando uno hace un rebase y se trabajó en el mismo archivo entrará en conflicto. El conflicto se resuelve de la misma forma en que se resuelve el conflicto en merge, decidiendo que linea entra, que linea sale, o si ambas se quedan. Esto es en cada commit hecho en el branch que entre en conflicto, así que probablemente se tenga que arreglar mas de un conflicto. 
@@ -57,9 +57,9 @@ git tag -a <v#.#.#> -m "message"			Crea un annotated tag con la opción de agreg
 git tag -a <v#.#.#> <checksum>				Este comando es para agregar un annotated tag in a specific commit point con su respectivo checksum number. Esto abrirá el editor de texto vi.
 git tag <new_tag> <old_tag_name>			Este comando es para poder renombrar un lightweight tag
 git tag -a <new_tag> <old_tag> ^ {} -m "message"	Este comando para poder renombrar un annotated tag y abrira el editor de texto vi para modificar el mensaje del tag previo
-git show <version>					Muestra la información acerca del tag
+git show <v#.#.#>					Muestra la información acerca del tag
 git checkout <v#.#.#>					Cambia a la version del tag
-git switch <branch_name>				Cambia al branch indicado
+git switch <branch_name>				Cambia al branch indicado y sale de la version
 git tag -d <v#.#.#>					Elimina un tag del repositorio local
 git push origin <tag>					Esto subira el tag especifico a nuestro repositorio de github
 git push --tags						Esto subira todos los tags a nuestro repositorio de github
