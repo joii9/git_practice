@@ -51,7 +51,7 @@
 **git rebase *branch_name***	
 *Cuando uno hace un rebase y se trabajó en el mismo archivo entrará en conflicto. El conflicto se resuelve de la misma forma en que se resuelve el conflicto en merge, decidiendo que linea entra, que linea sale, o si ambas se quedan. Esto es en cada commit hecho en el branch que entre en conflicto, así que probablemente se tenga que arreglar mas de un conflicto.*
 
-Existe un metodo para combinar commits en un solo commit en un mismo branch. Se puede acceder a el desde **git rebase -i HEAD~*#*** esto abrira un vim editor de texto con el numero solicidado de commits. En el podremos ver el hash de cada commit y previamente a este hash una leyenda "pick" que sera reemplazada con "squash" y un solo "pick" y los commits se agruparan en ese unico pick, guardamos este archivo con *:wq*. Entonces se abrirá otro editor de texto con nuestras enmiendas de nuestros commits y poder editar el unico commit existente, *:wq*. Y así se finaliza este procedimiento.
+Existe un metodo para combinar commits en un solo commit en un mismo branch. Se puede acceder a el desde **git rebase -i HEAD~#** esto abrira un vim editor de texto con el numero solicidado de commits. En el podremos ver el hash de cada commit y previamente a este hash una leyenda "pick" que sera reemplazada con "squash" y un solo "pick" y los commits se agruparan en ese unico pick, guardamos este archivo con *:wq*. Entonces se abrirá otro editor de texto con nuestras enmiendas de nuestros commits y poder editar el unico commit existente, *:wq*. Y así se finaliza este procedimiento.
 
 
 ## GIT TAG
