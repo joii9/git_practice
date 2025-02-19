@@ -68,7 +68,7 @@ Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0
 + **git switch *branch_name***				Cambia al branch indicado y sale de la version
 + **git tag -d *v#.#.#***				Elimina un tag del repositorio local
 + **git push origin *tag***				Esto subira el tag especifico a nuestro repositorio de github
-+ **git push --tags					Esto subira todos los tags a nuestro repositorio de github
++ **git push --tags**					Esto subira todos los tags a nuestro repositorio de github
 + **git push origin --delete *v#.#.#***			Esto eliminara el tag especificado de nuestro repositorio de github
 
 
