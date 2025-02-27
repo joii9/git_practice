@@ -7,7 +7,8 @@ git add							Agregamos el archivo a stagging area. (.) Agrega todos los archivo
 git commit -m "message"					Comando para generear un "checkpoint" un punto con log, un punto al cual se puede volver.
 git commit --amend					Este comando es para actualizar el ultimo commit y evitar crear otro commit
 git commit --amend -m "message"				Edita el ultimo commit con el nuevo mensaje
-git commit --amend --no-edit				Si olvidamos agregar algun archivo a nuestro ultSi olvidamos agregar algun archivo a nuestro ultimo commit, nosotros podemos agregar un archivo al ultimo commit
+git commit --amend --no-edit				Si olvidamos agregar algun archivo a nuestro ultimo commit, nosotros podemos agregar un archivo al ultimo commit
+git commit -a -m "message"				Este comando agrega todos los archivos modificados y crea un commit
 git diff <filename>					Para revisar cuales son las diferencias del archivo con el ultimo commit
 git log							Podemos ver todos los commits o "checkpoints" hechos del repositorio y un identificador SHA de cada commit
 git log --oneline					Muestra los logs en una sola linea
@@ -42,7 +43,7 @@ git branch <name_branch>				Crea una branch y se asigna un nombre al mismo
 git branch -d						Para borrar un branch de mi repositorio local
 git checkout <name_branch>				Se cambia a la rama con el nombre
 git switch <name_branch>				Cambia de branch
-git checkout -b <name_branch>				Para cambiar a un nuebo branch <name_branch>
+git checkout -b <name_branch>				Para cambiar a un nuevo branch <name_branch>
 git merge <branch_name>					Esto es para unir dos branches por ejemplo main y branch_name
 git rebase <branch_name>				Este comando es util cuando se han trabajado en dos branches y una de las branches se necesita poner por delante de la otra. Este comando traslada los commits que hace el rebase por delante de la otra branch. Es importante tener cuidado que branch hace el rebase. 
 git merge <branch_name>		Cuando uno intenta hacer merge en dos branches que ambas tuvieron modificaciones el merge entrara en conflicto (conflict). Esto se resuelve entrando al archivo y en el veremos las modificaciones marcadas con < ===== > que marcan el inicio, la division y el final de las modificaciones correspondientes a las dos branches. Aquí podemos decirdir quedarnos con una, con otra o incluso con las dos. Corremos de nuevo git add <filename>, esto mostrara el archivo en verde y una leyenda que los conflictos fueron resueltos y por ultimo un git commit -m "mensaje". De esta manera resolvemos un merging conflict.
@@ -72,8 +73,8 @@ git remote add origin <link>				Agrega nuestro repositorio local a un link en gi
 git push -u origin master				Cargará nuestro repositorio local a nuestro repositorio en github
 git push						Cargará nuestro repositorio local a nuestro repositorio en github
 git pull						Descargará las modificaciones que hayan sido subidas a nuestro repositorio en github
-git remote -v						Muestra que nuestro proyecto agregado de github en el link correcto
+git remote -v						Muestra que nuestro proyecto agregado de github en el link correcto (Origin o Remote; donde origin es nuestro repo en github y remote es el repositorio remoto de donde se hizo un fork, si se hizo un fork)
 git config user.name "some_name"			Para configurar el autor de las modificaciones
 git config user.email "someone@mail.com"		Para configurar el correo del autor de las modificaciones.
 git fetch <remote_branch>				Este comando solo buscará las modificaciiones hechas en una branch en github. Esto no mergeria.
-
+git push --set-upstream origin <branch_name>		Esto crea la branch en github y sube el commit hecho en esa branch. (Para posteriormente hacer un Pull Request).
