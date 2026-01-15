@@ -5,14 +5,18 @@
 + **git status**					Comprueba el estado de los archivos dentro del repositorio.
 + **git add**						Agregamos el archivo a stagging area. (.) Agrega todos los archivos. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2. O podemos agregar los archivos especificos que queramos escribiendolo continueamente ex. git add <filename1> <filename2>
 + **git commit -m "message"**				Comando para generear un "checkpoint" un punto con log, un punto al cual se puede volver.
++ **git add <filename>; git commit -m "message"**	Es posible agregar el archivo y su respecitvo commit con mensaje agregando un ; entre ambos comandos
 + **git commit --amend**				Este comando es para actualizar el ultimo commit y evitar crear otro commit
 + **git commit --amend -m "message"**			Edita el ultimo commit con el nuevo mensaje
 + **git commit --amend --no-edit**			Si olvidamos agregar algun archivo a nuestro ultimo commit, nosotros podemos agregar un archivo al ultimo commit
-+ **git commit -a -m "message"**				Este comando agrega todos los archivos modificados y crea un commit
++ **git commit -a -m "message"**			Este comando agrega todos los archivos modificados y crea un commit
 + **git diff <filename>**				Para revisar cuales son las diferencias del archivo con el ultimo commit
 + **git log**						Podemos ver todos los commits o "checkpoints" hechos del repositorio y un identificador SHA de cada commit
++ **git log --stat**					Muestra todos los logs con su respectivo archivo commited
 + **git log --oneline**					Muestra los logs en una sola linea
-+ **git log -n**					Limita el numero de log mostrasdos por commits, dependiendo el numero especificado
++ **git log --oneline -- <filename>**			Muestra todos los logs de un solo archivo
++ **git log -n**					Limita el numero de logs mostrados de commits, dependiendo el numero especificado
++ **git log -n --pretty=format:%B -- <filename>**	Limita el número de logs mostrados de commits de un archivo
 + **git log --skip=*#***				Salta el numero de logs recientes. (No muestra los ultimos "n" logs)
 + **git log --author=*author***				Muestra los commits hechos por "author"
 + **git log --grep=*keyword***				Muestra los mensajes de los commits que contengan la palabra buscada
