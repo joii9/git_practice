@@ -41,11 +41,11 @@
 
 ## GIT BRANCH
 + **git branch**					Muestra una lista de las branches en nuestro main repositorio
-+ **git branch <name_branch>**				Crea una branch y se asigna un nombre al mismo
++ **git branch *branch_name***				Crea una branch y se asigna un nombre al mismo
 + **git branch -d *branch_name***			Borra un branch de mi repositorio local
-+ **git checkout <name_branch>**			Se cambia a la rama con el nombre
++ **git checkout *branch_name***			Se cambia a la rama con el nombre
 + **git switch *branch_name***				Cambia de branch
-+ **git checkout -b <name_branch>**			Para cambiar a un nuevo branch <name_branch>
++ **git checkout -b *branch_name***			Para cambiar a un nuevo branch <name_branch>
 + **git merge *branch_name***				Esto es para unir dos branches por ejemplo main y branch_name
 + **git rebase *branch_name***				Este comando es util cuando se han trabajado en dos branches y una de las branches se necesita poner por delante de la otra. Este comando traslada los commits que hace el rebase por delante de la otra branch. Es importante tener cuidado que branch hace el rebase. 
 
@@ -82,10 +82,13 @@ Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0
 + **git remote add origin *link***			Agrega nuestro repositorio local a un link en github
 + **git push -u origin master**				Cargará nuestro repositorio local a nuestro repositorio en github
 + **git push**						Cargará nuestro repositorio local a nuestro repositorio en github
++ **git push -u origin *branch_name***			Con este comando es posible cargar una branch a nuestro repositorio remoto en github
 + **git pull**						Descargará las modificaciones que hayan sido subidas a nuestro repositorio en github
 + **git remote -v**					Muestra que nuestro proyecto agregado de github en el link correcto (Origin o Remote; donde origin es nuestro repo en github y remote es el repositorio remoto de donde se hizo un fork, si se hizo un fork)
 + **git config user.name *some_name***			Para configurar el autor de las modificaciones
 + **git config user.email *someone@mail.com***		Para configurar el correo del autor de las modificaciones.
 + **git fetch *remote_branch***				Este comando solo buscará las modificaciiones hechas en una branch en github. Esto no mergeria.
-+ **git push --set-upstream origin <branch_name>**		Esto crea la branch en github y sube el commit hecho en esa branch. (Para posteriormente hacer un Pull Request).
++ **git push --set-upstream origin <branch_name>**	Esto crea la branch en github y sube el commit hecho en esa branch. (Para posteriormente hacer un Pull Request).
++ **git push origin --delete *branch_name***		Este comando borra una branch en nuestro repositorio remoto en github. Es necesario estar en una branch diferente a la que se va a borrar.
+
 
