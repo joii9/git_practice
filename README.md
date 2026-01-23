@@ -51,12 +51,13 @@
 
 
 **git merge *branch_name***	
-*Cuando uno intenta hacer merge en dos branches que ambas tuvieron modificaciones el merge entrara en conflicto (conflict). Esto se resuelve entrando al archivo y en el veremos las modificaciones marcadas con < ===== > que marcan el inicio, la division y el final de las modificaciones correspondientes a las dos branches. Aquí podemos decirdir quedarnos con una, con otra o incluso con las dos. Corremos de nuevo git add <filename>, esto mostrara el archivo en verde y una leyenda que los conflictos fueron resueltos y por ultimo un git commit -m "mensaje". De esta manera resolvemos un merging conflict.*
+*Cuando uno intenta hacer merge en dos branches que ambas tuvieron modificaciones el merge entrara en conflicto (conflict). Esto se resuelve entrando al archivo y en el veremos las modificaciones marcadas con < ===== > que son el inicio, la division y el final de las modificaciones correspondientes a las dos branches. Aquí podemos decirdir quedarnos con una, con otra o incluso con las dos. Corremos de nuevo git add <filename>, esto mostrara el archivo en verde y una leyenda que los conflictos fueron resueltos y por ultimo un git commit -m "mensaje". De esta manera resolvemos un merging conflict.*
 
 **git rebase *branch_name***	
 *Cuando uno hace un rebase y se trabajó en el mismo archivo entrará en conflicto. El conflicto se resuelve de la misma forma en que se resuelve el conflicto en merge, decidiendo que linea entra, que linea sale, o si ambas se quedan. Esto es en cada commit hecho en el branch que entre en conflicto, así que probablemente se tenga que arreglar mas de un conflicto.*
 
-Existe un metodo para combinar commits en un solo commit en un mismo branch. Se puede acceder a el desde **git rebase -i HEAD~#** esto abrira un vim editor de texto con el numero solicidado de commits. En el podremos ver el hash de cada commit y previamente a este hash una leyenda "pick" que sera reemplazada con "squash" y un solo "pick" y los commits se agruparan en ese unico pick, guardamos este archivo con *:wq*. Entonces se abrirá otro editor de texto con nuestras enmiendas de nuestros commits y poder editar el unico commit existente, *:wq*. Y así se finaliza este procedimiento.
+Existe un metodo para combinar commits en un solo commit de un mismo branch. Se puede acceder a el desde **git rebase -i HEAD~#** esto abrira un vim editor de texto con el numero solicidado de commits. En el podremos ver el hash de cada commit y previamente a este hash una leyenda "pick" que sera reemplazada con "squash" y un solo "pick" y los commits se agruparan en ese unico pick, guardamos este archivo con *:wq*. Entonces se abrirá otro editor de texto con nuestras enmiendas de nuestros commits y poder editar el unico commit existente, *:wq*. Y así se finaliza este procedimiento.
+git rebase -i HEAD~# tiene mas que solo la función de combinar commits, se pueden editar commits anteriores al ultimo. # representa cuantos commits regresaremos a partir del ultimo hecho. Posteriormente a esto se abrirá un editor de texto vim y en el tendremos un listado de los commits involucrados, para editar sus mensajes es necesario cambiar la palabra "pick" por "edit" los commits que seran editados y guardamos con ":wq". Saliendo del editor de texto notaremos que el comando git rebase nos rebobinó en nuestro log, esto es comprobable con el comando git log, y notaremos que HEAD es el commit hasta el que se movio con el comando git rebase -i HEAD~#. En este punto es importante editar commit por commit con git commit --amend e iremos editando el commit actual y guardando de la misma forma ":wq". Así hasta terminar nuestras modificaciones.
 
 
 ## GIT TAG
@@ -75,7 +76,6 @@ Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0
 + **git push origin *tag***				Esto subira el tag especifico a nuestro repositorio de github
 + **git push --tags**					Esto subira todos los tags a nuestro repositorio de github
 + **git push origin --delete *v#.#.#***			Esto eliminara el tag especificado de nuestro repositorio de github
-
 
 ## GITHUB
 + **git clone https://github.com/....git**		Este comando clona un repositorio de github
