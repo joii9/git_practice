@@ -48,6 +48,7 @@
 + **git checkout -b *branch_name***			Para cambiar a un nuevo branch <name_branch>
 + **git merge *branch_name***				Esto es para unir dos branches por ejemplo main y branch_name
 + **git rebase *branch_name***				Este comando es util cuando se han trabajado en dos branches y una de las branches se necesita poner por delante de la otra. Este comando traslada los commits que hace el rebase por delante de la otra branch. Es importante tener cuidado que branch hace el rebase. 
++ **git cherry-pick *<commit-hash>***			Este comando hace un merge a la main branch en un commit especifico de la segunda branch.
 
 
 **git merge *branch_name***	
