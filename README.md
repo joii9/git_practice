@@ -68,6 +68,7 @@ Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0
 + **git tag -l *v#.#.#***				Busca un versión en especifico
 + **git tag *v#.#.#>***					Creando un tag ligero
 + **git tag -a *v#.#.#* -m "message"**			Crea un annotated tag con la opción de agregar un mensaje en el tag
++ **git tag <v#.#.#> <checksum>**			Este comando es para agregar un lightweight tag in a specific commit point.
 + **git tag -a *v#.#.# checksum***			Este comando es para agregar un annotated tag in a specific commit point con su respectivo checksum number. Esto abrirá el editor de texto vi.
 + **git tag *new_tag old_tag_name***			Este comando es para poder renombrar un lightweight tag
 + **git tag -a *new_tag old_tag* ^{} -m "message"**	Este comando para poder renombrar un annotated tag y abrira el editor de texto vi para modificar el mensaje del tag previo
@@ -78,6 +79,9 @@ Esta funcionalidad es para marcar puntos de liberación o de lanzamiento (v1.0.0
 + **git push origin *tag***				Esto subira el tag especifico a nuestro repositorio de github
 + **git push --tags**					Esto subira todos los tags a nuestro repositorio de github
 + **git push origin --delete *v#.#.#***			Esto eliminara el tag especificado de nuestro repositorio de github
+
+Nota: No olvidar que el checksum son los primeros 7 digitos del hash del commit.
+
 
 ## GITHUB
 + **git clone https://github.com/....git**		Este comando clona un repositorio de github
