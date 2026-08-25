@@ -79,6 +79,10 @@ git push origin --delete <v#.#.#>			Esto eliminara el tag especificado de nuestr
 
 Nota: No olvidar que el checksum son los primeros 7 digitos del hash del commit.
 
+GIT CONFIG
+
+git config --global http.proxy "127.0.0.1:9666"		Este comando fue necesario para configurar la salida en mi lugar de trabajo usando ultrasurf. Esa dirección y puerto corresponden a ultrasurf LISTENING: 127.0.0.1:9666
+
 
 GITHUB
 git clone https://github.com/....git			Este comando clona un repositorio de github
